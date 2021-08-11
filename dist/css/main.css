@@ -404,7 +404,7 @@
 }
 
 .contact {
-  padding-top: 40vh;
+  padding-top: 20vh;
   height: 100%;
   overflow: hidden;
   display: -webkit-box;
@@ -455,12 +455,16 @@ textarea {
   margin-left: 22px;
 }
 
+.contact .contact_me .email input {
+  margin-left: 24px;
+}
+
 .contact .contact_me .contact_me_btn {
   border: none;
   border-radius: 20rem;
   padding: 0.5rem 1rem 0.5rem 1rem;
   background-color: aqua;
-  margin-left: 4.8rem;
+  margin-left: 5rem;
 }
 
 .contact__list {
