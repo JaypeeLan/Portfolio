@@ -6,7 +6,7 @@
 }
 
 .home {
-  padding-top: 40vh;
+  padding-top: 25vh;
   height: 100%;
   overflow: hidden;
   text-align: center;
@@ -34,6 +34,32 @@
 .home_name-first {
   color: #ff652f;
   font-weight: 700;
+}
+
+.home_links {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 10vh;
+}
+
+.home_links a {
+  padding: 1rem 1.5rem 1rem 1.5rem;
+  border: 2px solid black;
+  border-radius: 10px;
+  background: rgb(172, 81, 81);
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+.home_links a:hover {
+  transition: all 0.6s ease;
+  background: #fff;
+  color: #272727;
 }
 
 .menu-btn {
@@ -433,33 +459,40 @@
   margin-bottom: 2rem;
 }
 
-.contact .contact_me {
-  flex-direction: column;
-  padding: 1.5rem 1.5rem 1.5rem 0;
-  width: 95%;
-  max-width: 800px;
+.contact .form {
+  width: 100%;
+  margin: 0 auto;
 }
 
-.contact .contact_me div {
+.contact .form .contact_me {
+  flex-direction: column;
+  /* padding: 1.5rem 1.5rem 1.5rem 0; */
+  width: 95%;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact .form .contact_me div {
   margin-bottom: 1rem;
 }
 
-.contact .contact_me div input,
+.contact .form .contact_me div input,
 textarea {
   width: 70%;
   border: none;
 }
 
-.contact .contact_me div input {
+.contact .form .contact_me div input {
   height: 30px;
   margin-left: 22px;
 }
 
-.contact .contact_me .email input {
+.contact .form .contact_me .email input {
   margin-left: 24px;
 }
 
-.contact .contact_me .contact_me_btn {
+.contact .form .contact_me .contact_me_btn {
   border: none;
   border-radius: 20rem;
   padding: 0.5rem 1rem 0.5rem 1rem;
@@ -540,8 +573,13 @@ textarea {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .contact .contact_me {
+  .contact .form .contact_me {
     width: 80%;
+  }
+
+  .home_links {
+    width: 50%;
+    flex-direction: row;
   }
 }
 
