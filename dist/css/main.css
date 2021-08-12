@@ -13,14 +13,7 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    from(#ee9099),
-    to(#cc9940)
-  );
-  background: linear-gradient(to right, #ee9099 0%, #cc9940 100%);
+  background: url(https://images.unsplash.com/photo-1470790376778-a9fbc86d70e2?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8cG9ydGZvbGlvJTIwYmFja2dyb3VuZHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60);
   background-size: cover;
 }
 
@@ -51,7 +44,7 @@
   padding: 1rem 1.5rem 1rem 1.5rem;
   border: 2px solid black;
   border-radius: 10px;
-  background: rgb(172, 81, 81);
+  background: rgb(139, 120, 120);
   color: #fff;
   margin-bottom: 2rem;
 }
@@ -222,16 +215,9 @@
 }
 
 .about_bio-img {
-  height: 50vh;
+  padding-top: 70px;
   width: 100%;
-  background: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    from(#ee9099),
-    to(#cc9940)
-  );
-  background: linear-gradient(to right, #ee9099 0%, #cc9940 100%);
+  background: url(https://images.unsplash.com/photo-1432821596592-e2c18b78144f?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDB8fHBvcnRmb2xpb3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60);
   background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -249,6 +235,7 @@
 }
 
 .about p {
+  color: rgb(255, 255, 255);
   margin-bottom: 2rem;
 }
 
@@ -313,16 +300,9 @@
 }
 
 .projects_bio-img {
-  height: 30vh;
+  padding-top: 20vh;
   width: 100%;
-  background: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    from(#ee9099),
-    to(#cc9940)
-  );
-  background: linear-gradient(to right, #ee9099 0%, #cc9940 100%);
+  background: url(https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Y29kaW5nfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60);
   background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -342,6 +322,17 @@
 .projects .text-secondary {
   font-size: 2rem;
   margin-bottom: 2rem;
+}
+
+.projects_skills {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+.projects_skills > li {
+  padding-bottom: 1rem;
 }
 
 .projects_items {
@@ -443,15 +434,8 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    from(#ee9099),
-    to(#cc9940)
-  );
-  background: linear-gradient(to right, #ee9099 0%, #cc9940 100%);
-  background-size: cover;
+  background: url(https://static-cse.canva.com/blob/137052/40-examples-to-help-you-build-the-perfect-contact-us-page.c4529f3d.jpg);
+  background-size: auto;
 }
 
 .contact h2 {
@@ -466,7 +450,6 @@
 
 .contact .form .contact_me {
   flex-direction: column;
-  /* padding: 1.5rem 1.5rem 1.5rem 0; */
   width: 95%;
   max-width: 800px;
   margin-left: auto;
@@ -479,8 +462,9 @@
 
 .contact .form .contact_me div input,
 textarea {
-  width: 70%;
+  width: 90%;
   border: none;
+  border-radius: 5px;
 }
 
 .contact .form .contact_me div input {
@@ -488,16 +472,20 @@ textarea {
   margin-left: 22px;
 }
 
-.contact .form .contact_me .email input {
-  margin-left: 24px;
+.contact .form .contact_me div [placeholder] {
+  padding: 10px;
+}
+
+.contact .form .contact_me div textarea {
+  margin-left: 22px;
 }
 
 .contact .form .contact_me .contact_me_btn {
   border: none;
-  border-radius: 20rem;
+  border-radius: 1em;
   padding: 0.5rem 1rem 0.5rem 1rem;
   background-color: aqua;
-  margin-left: 5rem;
+  margin-left: 1.2rem;
 }
 
 .contact__list {
@@ -663,5 +651,14 @@ footer {
   padding: 1rem;
   text-align: right;
   color: #fff;
+}
+
+input:focus-within,
+input:focus-visible {
+  outline: none;
+}
+
+img {
+  max-width: 100%;
 }
 /*# sourceMappingURL=main.css.map */
