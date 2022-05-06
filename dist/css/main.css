@@ -50,7 +50,7 @@
 }
 
 .home_links a:hover {
-  transition: all 0.6s ease;
+  transition: all 0.3s ease;
   background: #fff;
   color: #272727;
 }
@@ -63,7 +63,7 @@
   height: 20px;
   width: 28px;
   cursor: pointer;
-  -webkit-transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
 
@@ -74,7 +74,7 @@
   width: 28px;
   height: 3px;
   background: #fff;
-  -webkit-transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.2s ease;
   transition: all 0.5s ease-in-out;
 }
 
@@ -85,7 +85,7 @@
   width: 28px;
   height: 3px;
   background: #fff;
-  -webkit-transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.2s ease;
   transition: all 0.5s ease-in-out;
 }
 
@@ -96,8 +96,8 @@
   width: 20px;
   height: 3px;
   background: #fff;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .menu-btn_mobile.open {
@@ -182,7 +182,7 @@
   text-transform: uppercase;
   padding: 2rem 0;
   font-weight: 300;
-  -webkit-transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
 
