@@ -1,1 +1,1 @@
-[Portfolio](https://laniran-jp.netlify.app/)
+[Preview](https://laniran-jp.netlify.app/)
