@@ -1,6 +1,7 @@
 import React from "react";
 import { GitHub } from "react-feather";
 import { Linkedin } from "react-feather";
+import { motion } from "framer-motion";
 
 import { useForm, ValidationError } from "@formspree/react";
 
@@ -12,7 +13,12 @@ const Contact = () => {
   return (
     <section id="contact">
       <h2>Contact Me</h2>
-      <form onSubmit={handleSubmit}>
+      <motion.form
+        onSubmit={handleSubmit}
+        initial={{ y: 20, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ delay: 1.5, type: "spring", stiffness: 150 }}
+      >
         <input
           id="email"
           type="email"
@@ -30,10 +36,15 @@ const Contact = () => {
         <button type="submit" disabled={state.submitting}>
           Submit
         </button>
-      </form>
+      </motion.form>
 
       {/* ------------------------------------------------------- */}
-      <div className="social_icons">
+      <motion.div
+        className="social_icons"
+        initial={{ y: 20, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ delay: 2, duration: 6, type: "spring", stiffness: 150 }}
+      >
         <a
           href="https://github.com/JaypeeLan"
           target="_blank"
@@ -49,7 +60,7 @@ const Contact = () => {
         >
           <Linkedin />
         </a>
-      </div>
+      </motion.div>
     </section>
   );
 };

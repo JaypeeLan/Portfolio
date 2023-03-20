@@ -1,8 +1,8 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 interface ProjectDetails {
   src: any;
-
   projectText: string;
   github: string;
   live: string;
@@ -16,7 +16,11 @@ const ProjectsReuseComp: React.FC<ProjectDetails> = ({
   live,
 }) => {
   return (
-    <div>
+    <motion.div
+      initial={{ y: 20, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      transition={{ delay: 1, type: "spring", stiffness: 20 }}
+    >
       <img src={src} width={300} height={150} alt="site snapshot" />
       <div>
         <p>{projectText}</p>
@@ -32,7 +36,7 @@ const ProjectsReuseComp: React.FC<ProjectDetails> = ({
           </a>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

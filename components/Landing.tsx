@@ -31,21 +31,33 @@ const paragraphVariants = {
 
 const Landing = () => {
   return (
-    <motion.section
-      id="home"
-      variants={containerVariants}
-      initial="hideToLeft"
-      animate="visible"
-    >
+    <motion.section id="home">
       <div id="landing-page">
-        <p className="hi">
-          Hi, <span>I am</span>
-        </p>
-        <p className="myName">Laniran JohnPaul</p>
         <motion.p
-          variants={paragraphVariants}
-          initial="hideToLeft"
-          animate="visible"
+          className="hi"
+          initial={{ x: 20, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ delay: 0.8, type: "spring", stiffness: 50 }}
+        >
+          Hi, <span>I am</span>
+        </motion.p>
+        <motion.p
+          className="myName"
+          initial={{ y: -20, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{
+            delay: 1,
+
+            type: "spring",
+            stiffness: 100,
+          }}
+        >
+          Laniran JohnPaul
+        </motion.p>
+        <motion.p
+          initial={{ y: 20, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ delay: 1.3, type: "spring", stiffness: 30 }}
         >
           A frontend developer interested in bringing your ideas to life,
           solving real life problems and providing new ideas to your
