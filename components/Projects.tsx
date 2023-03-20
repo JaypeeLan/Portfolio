@@ -3,7 +3,7 @@ import ProjectsReuseComp from "./ProjectsReuseComp";
 
 interface Projects {
   src: any;
-  projectTitle: string;
+
   projectText: string;
   github: string;
   live: string;
@@ -11,55 +11,52 @@ interface Projects {
 
 const project: Array<Projects> = [
   {
-    src: "",
-    projectTitle: "React + Leaflet API",
-    projectText:
-      "Ip Adress tracker to get a location via its public ip address or domain",
-    github: "https://github.com/JaypeeLan/IP-Address-location-Tracker.git",
-    live: "https://ip-address-location.netlify.app/",
+    src: "/countdown-timer.png",
+    projectText: "Countdown Timer for events built with HTML and TypeScript",
+    github: "https://github.com/JaypeeLan/Countdown-Timer",
+    live: "https://countdown-timer-flax-eta.vercel.app/",
   },
   {
-    src: "",
-    projectTitle: "React + Leaflet API",
-    projectText:
-      "Ip Adress tracker to get a location via its public ip address or domain",
-    github: "https://github.com/JaypeeLan/IP-Address-location-Tracker.git",
-    live: "https://ip-address-location.netlify.app/",
+    src: "/quiz-game.png",
+    projectText: "A simple game built with Open Trivia API and TypeScript",
+    github: "https://github.com/JaypeeLan/QUIZ-GAME",
+    live: "https://quiz-game-sand-six.vercel.app/",
   },
   {
-    src: "",
-    projectTitle: "React + Leaflet API",
-    projectText:
-      "Ip Adress tracker to get a location via its public ip address or domain",
-    github: "https://github.com/JaypeeLan/IP-Address-location-Tracker.git",
-    live: "https://ip-address-location.netlify.app/",
+    src: "/natours.png",
+    projectText: "A landing page for tourist",
+    github: "https://github.com/JaypeeLan/Nexter",
+    live: "https://nexter-amber.vercel.app/",
   },
   {
-    src: "",
-    projectTitle: "React + Leaflet API",
+    src: "/paint.png",
     projectText:
-      "Ip Adress tracker to get a location via its public ip address or domain",
-    github: "https://github.com/JaypeeLan/IP-Address-location-Tracker.git",
-    live: "https://ip-address-location.netlify.app/",
+      "Paint clone whith JavaScript native canvas API and TypeScript",
+    github: "https://github.com/JaypeeLan/Paint-clone",
+    live: "https://jaypeelan.github.io/Paint-clone/",
   },
   {
-    src: "",
-    projectTitle: "React + Leaflet API",
+    src: "/Nasa.png",
+    projectText: "HD Pictures from NASA API and their details and author",
+    github: "https://github.com/JaypeeLan/NASA-APOD",
+    live: "https://jaypeelan.github.io/NASA-APOD/",
+  },
+  {
+    src: "/PinP.png",
     projectText:
-      "Ip Adress tracker to get a location via its public ip address or domain",
-    github: "https://github.com/JaypeeLan/IP-Address-location-Tracker.git",
-    live: "https://ip-address-location.netlify.app/",
+      "Minimize any video at the corner of your screen with picture-in-pictture",
+    github: "https://github.com/JaypeeLan/Picture-in-Picture",
+    live: "https://jaypeelan.github.io/Picture-in-Picture/",
   },
 ];
 const Projects = () => {
   return (
     <section id="projects">
-      <h2>Some of my works</h2>
+      <h2>My Projects</h2>
       <div className="project">
         {project.map((project) => (
           <ProjectsReuseComp
             src={project.src}
-            projectTitle={project.projectTitle}
             projectText={project.projectText}
             github={project.github}
             live={project.live}

@@ -2,7 +2,7 @@ import React from "react";
 
 interface ProjectDetails {
   src: any;
-  projectTitle: string;
+
   projectText: string;
   github: string;
   live: string;
@@ -10,17 +10,16 @@ interface ProjectDetails {
 
 const ProjectsReuseComp: React.FC<ProjectDetails> = ({
   src,
-  projectTitle,
+
   projectText,
   github,
   live,
 }) => {
   return (
     <div>
-      <img src={src} alt="site snapshot" />
+      <img src={src} width={300} height={150} alt="site snapshot" />
       <div>
-        <div>{projectTitle} </div>
-        <div>{projectText}</div>
+        <p>{projectText}</p>
       </div>
       <div>
         <div className="preview_icon">

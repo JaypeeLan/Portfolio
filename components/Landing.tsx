@@ -1,29 +1,68 @@
 import React from "react";
+import { motion } from "framer-motion";
+
+const containerVariants = {
+  hideToLeft: {
+    opacity: 0,
+    x: "100vw",
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: { delay: 0.5, type: "spring" },
+  },
+};
+
+const paragraphVariants = {
+  hideToLeft: {
+    x: "-100vw",
+    opacity: 0,
+  },
+  visible: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      delay: 1.5,
+      type: "spring",
+      stiffness: 50,
+    },
+  },
+};
 
 const Landing = () => {
   return (
-    <section id="home">
+    <motion.section
+      id="home"
+      variants={containerVariants}
+      initial="hideToLeft"
+      animate="visible"
+    >
       <div id="landing-page">
         <p className="hi">
           Hi, <span>I am</span>
         </p>
         <p className="myName">Laniran JohnPaul</p>
-        <p>A developer of the web, by the web and for the web</p>
-        <p>
-          I am a frontend developer interested in bringing your ideas to life,
+        <motion.p
+          variants={paragraphVariants}
+          initial="hideToLeft"
+          animate="visible"
+        >
+          A frontend developer interested in bringing your ideas to life,
           solving real life problems and providing new ideas to your
           organisation using latest technologies.
-        </p>
-        <a
+        </motion.p>
+        <motion.a
+          whileHover={{ scale: 1.05 }}
+          transition={{ type: "spring", stiffness: 300 }}
           href="/laniran_johnpaul_CV.pdf"
           target="_blank"
           className="download"
           download="Laniran_johnpaul_CV"
         >
           RESUME
-        </a>
+        </motion.a>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

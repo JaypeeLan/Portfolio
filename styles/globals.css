@@ -35,6 +35,10 @@ body {
   box-sizing: inherit;
 }
 
+img {
+  max-width: 100%;
+}
+
 section {
   min-height: 100vh;
   padding-left: 5%;
@@ -132,7 +136,7 @@ a:hover {
   }
 }
 
-#home,
+#landing-page,
 #projects,
 #contact,
 #about {
@@ -143,7 +147,7 @@ a:hover {
   max-width: 90%;
   margin-left: auto;
   margin-right: auto;
-  padding: 50px 10px 50px 10px;
+  padding: 30px 10px 20px 10px;
 }
 
 #landing-page {
@@ -152,10 +156,6 @@ a:hover {
 }
 #landing-page > * {
   padding-bottom: 30px;
-}
-
-#landing-page > p:nth-child(4) {
-  text-align: justify;
 }
 
 #landing-page .hi {
@@ -173,7 +173,11 @@ a:hover {
 }
 
 #landing-page > p:nth-child(3) {
-  font-size: var(--small-font-size);
+  text-align: justify;
+  font-size: clamp(1.2rem, 2.5vw, 2rem);
+  line-height: 40px;
+  max-width: 90%;
+  margin-bottom: 50px;
 }
 
 @keyframes color-change {
@@ -264,13 +268,6 @@ a:hover {
   opacity: 1;
 }
 
-/* social icons */
-/* #landing-page > div {
-  position: fixed;
-  display: flex;
-  left: 85%;
-} */
-
 /* ---------------------------------------- */
 @media (max-width: 760px) {
   section {
@@ -279,22 +276,12 @@ a:hover {
   #home {
     display: flex;
     flex-direction: column;
-    padding-top: 65px;
+    /* padding-top: 15px; */
   }
 
   #landing-page {
     padding-top: 80px;
     padding-bottom: 10px;
-  }
-
-  #landing-page > * {
-    padding-bottom: 30px;
-  }
-
-  #home > div:nth-child(2) {
-    margin-top: 40px;
-    padding-top: 20px;
-    margin-left: 0px;
   }
 }
 
@@ -308,6 +295,9 @@ a:hover {
   #home {
     padding-top: 45px;
   }
+  #landing-page {
+    padding-top: 60px;
+  }
 
   #landing-page > * {
     padding-bottom: 5px;
@@ -316,42 +306,50 @@ a:hover {
 
 /* --------- About section ----------------- */
 #about {
-  padding-top: 50px;
   padding-bottom: 50px;
+  margin-top: 30px;
 }
 
 #about .about_headings {
   text-align: center;
-  padding-top: 50px;
   padding-bottom: 5%;
+}
+
+#about .about_headings img {
+  padding-top: 20px;
 }
 
 #about .about-me {
   text-align: justify;
-  font-size: clamp(16px, 2vw, 2.5rem);
+  font-size: clamp(1rem, 2vw, 2.5rem);
   line-height: 50px;
-  font-weight: 700;
-  color: var(--primary-color);
-  padding-bottom: 20px;
+}
+
+#about .about-me p:first-child {
+  font-weight: 400;
+  line-height: 65px;
 }
 
 #about p:last-child {
   text-transform: uppercase;
   color: var(--light-blue);
+  font-weight: 700;
 }
 
-@media screen and (max-width: 720px) {
-  #about {
-    padding-top: 20px;
+@media screen and (max-width: 520px) {
+  #about .about-me > p:first-child {
+    line-height: 40px;
   }
-  #about .about-me {
-    line-height: 1.8rem;
+
+  #about .about-me p:last-child {
+    line-height: normal;
+    padding-top: 18px;
   }
 }
 /* -------- Projects page----------------- */
 #projects {
   text-align: center;
-  padding-top: 50px;
+  margin-top: 70px;
 }
 
 #projects a:focus {
@@ -369,9 +367,12 @@ a:hover {
   text-align: center;
   margin: 15px;
   max-width: 20rem;
+  overflow: hidden;
   background-color: var(--primary-dark-green);
 }
-
+#projects > div > div {
+  transition: transform 0.2s ease-out;
+}
 #projects > div > div:hover {
   transform: scale(1.07);
   -webkit-transform: scale(1.07);
