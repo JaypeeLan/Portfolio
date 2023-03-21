@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Phudu&family=Signika+Negative:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kalam&family=Phudu&family=Signika+Negative:wght@300;400;700&display=swap");
 :root {
   --biggest-font-size: clamp(40px, 5.5vw, 7rem);
   --bigger-font-size: clamp(2.5rem, 3vw, 3.5em);
@@ -67,7 +68,7 @@ a:hover {
 /* ================ Navbar ================ */
 #navbar {
   position: fixed;
-  z-index: 99;
+  z-index: 10;
   width: 100%;
 }
 
@@ -506,4 +507,33 @@ a:hover {
   -moz-transition: 0.3s all ease;
   -ms-transition: 0.3s all ease;
   -o-transition: 0.3s all ease;
+}
+
+/* ========================= */
+#globalLoader {
+  position: fixed;
+  z-index: 90;
+  background-color: rgb(7, 7, 7);
+  width: 100vw;
+  height: 100vh;
+}
+
+/* ============================ */
+
+#loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(0, 0, 0);
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+}
+
+#loader .typewriter {
+  position: absolute;
+  z-index: 999;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

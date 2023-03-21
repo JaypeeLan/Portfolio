@@ -2,7 +2,6 @@ import React from "react";
 import { GitHub } from "react-feather";
 import { Linkedin } from "react-feather";
 import { motion } from "framer-motion";
-
 import { useForm, ValidationError } from "@formspree/react";
 
 const Contact = () => {
@@ -43,7 +42,7 @@ const Contact = () => {
         className="social_icons"
         initial={{ y: 20, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
-        transition={{ delay: 2, duration: 6, type: "spring", stiffness: 150 }}
+        transition={{ delay: 1, duration: 6, type: "spring", stiffness: 150 }}
       >
         <a
           href="https://github.com/JaypeeLan"

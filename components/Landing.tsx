@@ -1,34 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const containerVariants = {
-  hideToLeft: {
-    opacity: 0,
-    x: "100vw",
-  },
-  visible: {
-    opacity: 1,
-    x: 0,
-    transition: { delay: 0.5, type: "spring" },
-  },
-};
-
-const paragraphVariants = {
-  hideToLeft: {
-    x: "-100vw",
-    opacity: 0,
-  },
-  visible: {
-    x: 0,
-    opacity: 1,
-    transition: {
-      delay: 1.5,
-      type: "spring",
-      stiffness: 50,
-    },
-  },
-};
-
 const Landing = () => {
   return (
     <motion.section id="home">
@@ -37,7 +9,7 @@ const Landing = () => {
           className="hi"
           initial={{ x: 20, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
-          transition={{ delay: 0.8, type: "spring", stiffness: 50 }}
+          transition={{ delay: 2.5, type: "spring", stiffness: 20 }}
         >
           Hi, <span>I am</span>
         </motion.p>
@@ -46,10 +18,9 @@ const Landing = () => {
           initial={{ y: -20, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{
-            delay: 1,
-
+            delay: 2.7,
             type: "spring",
-            stiffness: 100,
+            stiffness: 60,
           }}
         >
           Laniran JohnPaul
@@ -57,7 +28,7 @@ const Landing = () => {
         <motion.p
           initial={{ y: 20, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          transition={{ delay: 1.3, type: "spring", stiffness: 30 }}
+          transition={{ delay: 2.9, type: "spring", stiffness: 30 }}
         >
           A frontend developer interested in bringing your ideas to life,
           solving real life problems and providing new ideas to your

@@ -1,11 +1,11 @@
 import Head from "next/head";
-import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Navbar from "@components/Navbar";
 import Landing from "@components/Landing";
 import About from "@components/About";
 import Projects from "@components/Projects";
 import Contact from "@components/Contact";
+import React from "react";
 
 export default function Home() {
   return (
@@ -16,6 +16,16 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      {React.useEffect(() => {
+        if (typeof window !== "undefined") {
+          const loader = document.getElementById("globalLoader");
+          if (loader) {
+            setTimeout(() => {
+              loader.remove();
+            }, 2000);
+          }
+        }
+      }, [])}
       <main className={styles.main}>
         <Navbar />
         <Landing />
