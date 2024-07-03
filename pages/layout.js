@@ -1,6 +1,7 @@
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { BsFillTreeFill, BsList, BsX } from "react-icons/bs";
+import { BsList, BsX } from "react-icons/bs";
 
 export default function Layout({ children }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,19 +12,21 @@ export default function Layout({ children }) {
   return (
     <>
       <div className="nav-bar">
-        <BsFillTreeFill size="50px" color="#1d3319" />
+        <Link href={"/"}>
+          <Image src="/logo.png" width={50} height={50} alt="logo" />
+        </Link>
         <div className={`nav-links ${isOpen ? "open" : ""}`}>
-          <Link href="/home">
+          <Link href="/">
             <span className="nav-link">Home</span>
           </Link>
-          <Link href="/explore">
+          <Link href="/about">
             <span className="nav-link">About</span>
           </Link>
-          <Link href="/">
+          <Link href="/projects">
             <span className="nav-link">Projects</span>
           </Link>
-          <Link href="/">
-            <a className="back-btn">Contact</a>
+          <Link href="/contact">
+            <span className="nav-link">Contact</span>
           </Link>
         </div>
         <div className="menu-icon" onClick={toggleMenu}>

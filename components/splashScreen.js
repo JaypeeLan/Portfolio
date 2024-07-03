@@ -1,6 +1,7 @@
 // components/SplashScreen.js
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { Typewriter } from "react-simple-typewriter";
 
 const SplashScreen = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -23,7 +24,17 @@ const SplashScreen = () => {
         className="splash-screen"
       >
         <div className="splash-content">
-          <h1>Welcome to MyApp</h1>
+          <h1>
+            <Typewriter
+              words={["Welcome"]}
+              loop={1}
+              cursor
+              cursorStyle=""
+              typeSpeed={100}
+              deleteSpeed={50}
+              delaySpeed={3000}
+            />
+          </h1>
         </div>
       </motion.div>
     )

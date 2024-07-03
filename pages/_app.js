@@ -10,7 +10,7 @@ import SplashScreen from "../components/splashScreen";
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
-  const [isSplashVisible, setIsSplashVisible] = useState(true);
+  const [isSplashVisible, setIsSplashVisible] = useState(false);
 
   useEffect(() => {
     const handleRouteChangeStart = () => {
@@ -37,11 +37,19 @@ function MyApp({ Component, pageProps }) {
   }, [router]);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsSplashVisible(false);
-    }, 5000); // 5 seconds
+    // Check if the splash screen has already been shown
+    const splashScreenShown = localStorage.getItem("splashScreenShown");
 
-    return () => clearTimeout(timer);
+    if (!splashScreenShown) {
+      setIsSplashVisible(true);
+
+      const timer = setTimeout(() => {
+        setIsSplashVisible(false);
+        localStorage.setItem("splashScreenShown", "true");
+      }, 5000); // 5 seconds
+
+      return () => clearTimeout(timer);
+    }
   }, []);
 
   return (

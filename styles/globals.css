@@ -1,9 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Phudu&family=Signika+Negative:wght@300;400;700&display=swap");
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Phudu", cursive;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --base-green: #233d1e;
+  --dark-green: #1d3319;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: white;
+  color: #fff;
 }
 
 a {
@@ -11,131 +26,112 @@ a {
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
-}
-
-:root {
-  --base-green: #233d1e;
-  --dark-green: #1d3319;
-  --page-background: #f1f7f0;
-  --title-font: "Amatic SC", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-body {
-  background: var(--page-background);
-  color: black;
-}
-
 .main {
-  position: relative;
-  z-index: 0;
+  padding-top: 70px;
 }
+
+#home,
+#contact,
+#about,
+#projects {
+  background: var(--dark-green);
+  width: 100%;
+  height: 100vh;
+}
+
+/* -----home--------- */
 
 .home {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100vh;
-  background: var(--base-green);
-}
-
-.explore-btn {
-  display: block;
-  padding: 16px 24px;
-  background-color: var(--dark-green);
-  color: white;
-  font-size: 36px;
-  font-weight: bold;
-  font-family: var(--title-font);
-}
-
-.base-page-size {
-  width: 100%;
-  min-height: 100vh;
-}
-
-.explore-page-hero {
-  width: 100%;
-  height: 100vh;
-  position: relative;
-
-  display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  padding-bottom: 100px;
-}
-.parks-page-hero {
-  width: 100%;
-  height: 100vh;
-  position: relative;
-  background-color: red;
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding-bottom: 100px;
 }
 
-.mountains {
+a:hover {
+  cursor: url("../public/custom-cursor.png"), auto !important;
+}
+
+.download {
+  font-size: 1.5rem;
+  display: inline-block;
+
+  text-decoration: none;
+  color: hsl(317 100% 54%);
+  border: hsl(317 100% 54%) 0.125em solid;
+  padding: 0.25em 1em;
+  border-radius: 0.25em;
+  text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
+  box-shadow: inset 0 0 0.5em 0 hsl(317 100% 54%), 0 0 0.5em 0 hsl(317 100% 54%);
+  position: relative;
+  transition: transform 300ms linear;
+  -webkit-border-radius: 0.25em;
+  -moz-border-radius: 0.25em;
+  -ms-border-radius: 0.25em;
+  -o-border-radius: 0.25em;
+}
+
+.download::before {
+  pointer-events: none;
+  content: "";
   position: absolute;
+  background: hsl(317 100% 54%);
+  top: 120%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: perspective(1em) rotateX(40deg) scale(1, 0.35);
+  filter: blur(1em);
+  opacity: 0.7;
+  -webkit-transform: perspective(1em) rotateX(40deg) scale(1, 0.35);
+  -moz-transform: perspective(1em) rotateX(40deg) scale(1, 0.35);
+  -ms-transform: perspective(1em) rotateX(40deg) scale(1, 0.35);
+  -o-transform: perspective(1em) rotateX(40deg) scale(1, 0.35);
+  -webkit-filter: blur(1em);
+}
+
+.download::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
   left: 0;
   right: 0;
-  bottom: 0;
-  z-index: 0;
+  box-shadow: 0 0 2em 0.5em hsl(317 100% 54%);
+  opacity: 0;
+  background-color: hsl(317 100% 54%);
+  z-index: -1;
+  transition: all 300ms linear;
+  -webkit-transition: all 300ms linear;
+  -moz-transition: all 300ms linear;
+  -ms-transition: all 300ms linear;
+  -o-transition: all 300ms linear;
 }
 
-.mountain {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  height: 750px;
+.download:hover,
+.download:focus {
+  transform: scale(1.15);
+  color: hsl(321, 67%, 78%);
+  text-shadow: none;
 }
 
-.title-text {
-  font-family: var(--title-font);
-  font-size: 95px;
-  margin: 0;
+.download:hover::before,
+.download:focus::before {
+  opacity: 1;
 }
 
-.sub-text {
-  margin: 0;
-  margin-bottom: 18px;
-  text-align: center;
-  max-width: 700px;
+.download:hover::after,
+.download:focus::after {
+  opacity: 1;
 }
 
-.header-content {
-  padding: 18px;
-  text-align: center;
-  position: relative;
-  z-index: 1;
-}
+/* --------- */
 
-.back-btn {
-  display: inline-block;
-  padding: 12px 18px;
-  background-color: var(--dark-green);
-  color: white;
-  font-size: 28px;
-  font-family: var(--title-font);
-  cursor: pointer;
-}
+/* ----navbar----- */
 
 .nav-bar {
+  background-color: var(--dark-green);
+
   position: absolute;
   top: 0;
   left: 0;
@@ -161,9 +157,9 @@ body {
 
 .nav-link {
   margin-right: 40px;
-  font-size: 28px;
+  font-size: 20px;
   font-family: var(--title-font);
-  cursor: pointer;
+  cursor: url("../public/custom-cursor.png"), auto !important;
 }
 
 @media (max-width: 760px) {
@@ -192,7 +188,7 @@ body {
   }
 }
 
-/* styles/globals.css */
+/* splash screen */
 .splash-screen {
   position: fixed;
   top: 0;
