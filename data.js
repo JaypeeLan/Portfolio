@@ -1,4 +1,4 @@
-export default PROJECTS = [
+export const PROJECTS = [
   {
     src: "/countdown-timer.png",
     projectText: "Countdown Timer for events built with HTML and TypeScript",

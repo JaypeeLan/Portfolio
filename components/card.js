@@ -1,27 +1,19 @@
 /* eslint-disable @next/next/no-img-element */
+import React from "react";
 
-import { GitHub, Link } from "react-feather";
-
-const Card = ({ src, projectText, github, live }) => {
+function Card({ src, projectText, github, live }) {
   return (
-    <div>
-      <img src={src} width={300} height={150} alt="site snapshot" />
-      <div>
-        <p>{projectText}</p>
-      </div>
-      <div>
-        <div className="preview_icon">
-          <a href={github}>
-            <GitHub />
-          </a>
-
-          <a href={live}>
-            <Link />
-          </a>
-        </div>
-      </div>
+    <div className="card">
+      <img src={src} alt={projectText} />
+      <h3>{projectText}</h3>
+      <a href={github} target="_blank" rel="noopener noreferrer">
+        GitHub
+      </a>
+      <a href={live} target="_blank" rel="noopener noreferrer">
+        Live Demo
+      </a>
     </div>
   );
-};
+}
 
 export default Card;
