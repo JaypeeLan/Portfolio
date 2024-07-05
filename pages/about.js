@@ -1,8 +1,12 @@
 import { motion } from "framer-motion";
+import Head from "next/head";
 
 export default function Explore() {
   return (
     <div className="about" id="about">
+      <Head>
+        <title>About</title>
+      </Head>
       <motion.div
         initial={{ y: 25, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
@@ -11,17 +15,17 @@ export default function Explore() {
           duration: 0.75,
         }}
       >
-        <h1 className="title-text">
-          An energetic self-taught and skilled web developer with excellent
-          awareness of web design industry trends and issues regarding user
-          experience and accessibility. Created websites for clients as well as
-          worked on self-initiated projects using the best practices. Outside
-          work like being around friends and enjoy video games, learning a new
-          language and playing chess, and also work on my CSS.
+        <h1>About me</h1>
+        <h1>
+          An energetic and self-taught web developer with a keen awareness of
+          industry trends and issues related to user experience and
+          accessibility. I have created websites for clients and undertaken
+          self-initiated projects, adhering to best practices. Outside of work,
+          I enjoy reading technical articles to stay current with the latest
+          trends, playing games like Call of Duty, implementing new features in
+          my old projects, and exploring fun places.
         </h1>
-        <p className="sub-text">
-          MY STACK: JAVASCRIPT, REACT.JS, NEXT.JS, TYPESCRIPT, NODE.JS
-        </p>
+        <p>MY STACK: JAVASCRIPT, REACT.JS, NEXT.JS, TYPESCRIPT, NODE.JS</p>
       </motion.div>
     </div>
   );

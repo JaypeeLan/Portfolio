@@ -12,9 +12,9 @@ export default function Home() {
       </h1>
 
       <p>
-        A frontend engineer interested in bringing your ideas to life, solving
-        real life problems and providing new ideas to your organisation using
-        latest technologies.
+        A frontend engineer passionate about bringing ideas to life, solving
+        real-world problems, and offering innovative solutions using
+        cutting-edge technologies.{" "}
       </p>
 
       <a

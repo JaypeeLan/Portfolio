@@ -1,5 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 
+import { GitHub, Link } from "react-feather";
+
 const Card = ({ src, projectText, github, live }) => {
   return (
     <div>
@@ -10,11 +12,11 @@ const Card = ({ src, projectText, github, live }) => {
       <div>
         <div className="preview_icon">
           <a href={github}>
-            <span>github</span>
+            <GitHub />
           </a>
 
           <a href={live}>
-            <span>Live link</span>
+            <Link />
           </a>
         </div>
       </div>
