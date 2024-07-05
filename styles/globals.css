@@ -466,12 +466,12 @@ a:hover {
 #message::placeholder {
   color: rgb(81, 58, 58);
 }
-
+/* 
 #email:focus,
 #message:focus {
   background-color: var(--light-blue);
   border: 1.5px dashed rgb(207, 230, 173);
-}
+} */
 
 #contact > form > button {
   width: fit-content;

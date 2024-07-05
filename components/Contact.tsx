@@ -1,6 +1,6 @@
 import React from "react";
-import { GitHub } from "react-feather";
-import { Linkedin } from "react-feather";
+import { GitHub, Linkedin } from "react-feather";
+
 import { motion } from "framer-motion";
 import { useForm, ValidationError } from "@formspree/react";
 

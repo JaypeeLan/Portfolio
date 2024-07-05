@@ -24,7 +24,8 @@ const project: Array<Projects> = [
   },
   {
     src: "/natours.png",
-    projectText: "A landing page for tourist",
+    projectText:
+      "A landing page for tourist, looking for places in a new region",
     github: "https://github.com/JaypeeLan/Nexter",
     live: "https://nexter-amber.vercel.app/",
   },
@@ -56,6 +57,7 @@ const Projects = () => {
       <div className="project">
         {project.map((project) => (
           <ProjectsReuseComp
+            key={project.src}
             src={project.src}
             projectText={project.projectText}
             github={project.github}
