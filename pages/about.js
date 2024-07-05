@@ -11,10 +11,16 @@ export default function Explore() {
           duration: 0.75,
         }}
       >
-        <h1 className="title-text"> Parks</h1>
+        <h1 className="title-text">
+          An energetic self-taught and skilled web developer with excellent
+          awareness of web design industry trends and issues regarding user
+          experience and accessibility. Created websites for clients as well as
+          worked on self-initiated projects using the best practices. Outside
+          work like being around friends and enjoy video games, learning a new
+          language and playing chess, and also work on my CSS.
+        </h1>
         <p className="sub-text">
-          Explore Nation Parks is the countries leader for nation park tours.
-          Make your vacation great with one of our amazing tour guides!
+          MY STACK: JAVASCRIPT, REACT.JS, NEXT.JS, TYPESCRIPT, NODE.JS
         </p>
       </motion.div>
     </div>

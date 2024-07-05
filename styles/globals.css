@@ -10,6 +10,7 @@ body {
 :root {
   --base-green: #233d1e;
   --dark-green: #1d3319;
+  --pry-blue: rgb(49, 120, 210);
 }
 
 * {
@@ -25,9 +26,12 @@ a {
   color: inherit;
   text-decoration: none;
 }
+a:hover {
+  cursor: url("../public/custom-cursor.png"), auto;
+}
 
 .main {
-  padding-top: 70px;
+  padding-top: 60px;
 }
 
 #home,
@@ -39,6 +43,16 @@ a {
   height: 100vh;
 }
 
+h1 {
+  font-size: 50px;
+  line-height: 46px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 28px;
+}
+
 /* -----home--------- */
 
 .home {
@@ -46,10 +60,14 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
+  text-align: center;
+  gap: 2rem;
 
-a:hover {
-  cursor: url("../public/custom-cursor.png"), auto !important;
+  p {
+    max-width: 900px;
+    font-size: 28px;
+    line-height: 40px;
+  }
 }
 
 .download {
@@ -57,12 +75,12 @@ a:hover {
   display: inline-block;
 
   text-decoration: none;
-  color: hsl(317 100% 54%);
-  border: hsl(317 100% 54%) 0.125em solid;
+  color: var(--pry-blue);
+  border: var(--pry-blue) 0.125em solid;
   padding: 0.25em 1em;
   border-radius: 0.25em;
   text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
-  box-shadow: inset 0 0 0.5em 0 hsl(317 100% 54%), 0 0 0.5em 0 hsl(317 100% 54%);
+  box-shadow: inset 0 0 0.5em 0 var(--pry-blue), 0 0 0.5em 0 var(--pry-blue);
   position: relative;
   transition: transform 300ms linear;
   -webkit-border-radius: 0.25em;
@@ -75,7 +93,7 @@ a:hover {
   pointer-events: none;
   content: "";
   position: absolute;
-  background: hsl(317 100% 54%);
+  background: var(--pry-blue);
   top: 120%;
   left: 0;
   width: 100%;
@@ -97,9 +115,9 @@ a:hover {
   bottom: 0;
   left: 0;
   right: 0;
-  box-shadow: 0 0 2em 0.5em hsl(317 100% 54%);
+  box-shadow: 0 0 2em 0.5em var(--pry-blue);
   opacity: 0;
-  background-color: hsl(317 100% 54%);
+  background-color: var(--pry-blue);
   z-index: -1;
   transition: all 300ms linear;
   -webkit-transition: all 300ms linear;
@@ -162,6 +180,10 @@ a:hover {
   cursor: url("../public/custom-cursor.png"), auto !important;
 }
 
+.nav-link:hover {
+  color: var(--pry-blue);
+}
+
 @media (max-width: 760px) {
   .nav-links {
     position: fixed;
@@ -186,6 +208,104 @@ a:hover {
   .menu-icon {
     display: block;
   }
+}
+
+/* project */
+.project {
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(3, auto);
+  gap: 2rem;
+  margin: 0 auto;
+
+  div {
+    background-color: red;
+  }
+}
+
+/* contact */
+/* -------- Contact section------------------- */
+#contact {
+  padding: 10%;
+  text-align: center;
+}
+
+#contact > h2,
+#contact form div {
+  padding-bottom: 20px;
+}
+
+/* email and message input fields */
+#contact > form {
+  display: flex;
+  flex-direction: column;
+}
+
+#email,
+#message {
+  /* background-color: transparent; */
+  border: 1px solid var(--light-blue);
+  padding: 10px;
+  outline: none;
+  margin-bottom: 30px;
+}
+
+#email {
+  min-height: 30px;
+  font-family: inherit;
+}
+
+#message {
+  min-height: 40vh;
+}
+
+#email::placeholder,
+#message::placeholder {
+  color: rgb(81, 58, 58);
+}
+
+#email:focus,
+#message:focus {
+  border: 1.5px dashed rgb(207, 230, 173);
+}
+
+#contact > form > button {
+  width: fit-content;
+  padding: 10px;
+  margin-bottom: 50px;
+  outline: none;
+  border: none;
+}
+
+#contact > form > button:hover {
+  background-color: #052305;
+  color: rgb(184, 218, 248);
+  transition: 0.3s all ease;
+  -webkit-transition: 0.3s all ease;
+  -moz-transition: 0.3s all ease;
+  -ms-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+}
+
+/* contact icons */
+.social_icons .socials {
+  margin: 20px;
+  cursor: pointer !important;
+}
+
+.social_icons .socials svg:hover {
+  scale: 1.15;
+  color: rgb(184, 218, 248);
+  transform: translateY(-5px);
+  -webkit-transform: translateY(-5px);
+  -moz-transform: translateY(-5px);
+  -ms-transform: translateY(-5px);
+  -o-transform: translateY(-5px);
+  transition: 0.3s all ease;
+  -webkit-transition: 0.3s all ease;
+  -moz-transition: 0.3s all ease;
+  -ms-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
 }
 
 /* splash screen */

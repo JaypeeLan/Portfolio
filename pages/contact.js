@@ -1,8 +1,16 @@
+/* eslint-disable react/jsx-no-target-blank */
+import { GitHub, Linkedin } from "react-feather";
+
 import { motion } from "framer-motion";
+import { useForm, ValidationError } from "@formspree/react";
 
 export default function Contact() {
+  const [state, handleSubmit] = useForm("mlevjjpg");
+  if (state.succeeded) {
+    alert("Message sent");
+  }
   return (
-    <div className="about" id="contact">
+    <div className="contact" id="contact">
       <motion.div
         initial={{ y: 25, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
@@ -12,10 +20,44 @@ export default function Contact() {
         }}
       >
         <h1 className="title-text"> contact</h1>
-        <p className="sub-text">
-          Explore Nation Parks is the countries leader for nation park tours.
-          Make your vacation great with one of our amazing tour guides!
-        </p>
+        <form onSubmit={handleSubmit}>
+          <input
+            id="email"
+            type="email"
+            name="email"
+            placeholder="Email Address"
+          />
+          <ValidationError prefix="Email" field="email" errors={state.errors} />
+          <textarea id="message" name="message" placeholder="message" />
+
+          <ValidationError
+            prefix="Message"
+            field="message"
+            errors={state.errors}
+          />
+          <button type="submit" disabled={state.submitting}>
+            Submit
+          </button>
+        </form>
+
+        {/* ------------------------------------------------------- */}
+        <div className="social_icons">
+          <a
+            href="https://github.com/JaypeeLan"
+            target="_blank"
+            className="socials"
+          >
+            <GitHub />
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/laniranjohnpaul/"
+            target="_blank"
+            className="socials"
+          >
+            <Linkedin />
+          </a>
+        </div>
       </motion.div>
     </div>
   );
