@@ -36,6 +36,7 @@ export default function Contact() {
           delay: 0.2,
           duration: 0.75,
         }}
+        className="form"
       >
         <div className="contact-info">
           <Mail />

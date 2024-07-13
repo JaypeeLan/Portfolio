@@ -37,7 +37,6 @@ function MyApp({ Component, pageProps }) {
   }, [router]);
 
   useEffect(() => {
-    // Check if the splash screen has already been shown
     const splashScreenShown = localStorage.getItem("splashScreenShown");
 
     if (!splashScreenShown) {
@@ -46,7 +45,7 @@ function MyApp({ Component, pageProps }) {
       const timer = setTimeout(() => {
         setIsSplashVisible(false);
         localStorage.setItem("splashScreenShown", "true");
-      }, 5000); // 5 seconds
+      }, 5000);
 
       return () => clearTimeout(timer);
     }

@@ -16,7 +16,7 @@ export default function Explore() {
         }}
       >
         <h1>About me</h1>
-        <h1>
+        <h2>
           An energetic and self-taught web developer with a keen awareness of
           industry trends and issues related to user experience and
           accessibility. I have created websites for clients and undertaken
@@ -24,7 +24,7 @@ export default function Explore() {
           I enjoy reading technical articles to stay current with the latest
           trends, playing games like Call of Duty, implementing new features in
           my old projects, and exploring fun places.
-        </h1>
+        </h2>
         <p>MY STACK: JAVASCRIPT, REACT.JS, NEXT.JS, TYPESCRIPT, NODE.JS</p>
       </motion.div>
     </div>

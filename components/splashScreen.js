@@ -1,4 +1,3 @@
-// components/SplashScreen.js
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Typewriter } from "react-simple-typewriter";
@@ -9,7 +8,7 @@ const SplashScreen = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(false);
-    }, 3000);
+    }, 5000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -20,7 +19,7 @@ const SplashScreen = () => {
         initial={{ opacity: 1 }}
         animate={{ opacity: 0 }}
         exit={{ opacity: 0 }}
-        transition={{ duration: 3 }}
+        transition={{ duration: 5 }}
         className="splash-screen"
       >
         <div className="splash-content">

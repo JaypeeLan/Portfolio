@@ -32,9 +32,8 @@ a:hover {
 }
 
 .main {
-  padding-top: 90px;
   background: var(--dark-green);
-  padding: 0 5%;
+  padding: 10px 5%;
 }
 
 #home,
@@ -42,17 +41,28 @@ a:hover {
 #about,
 #projects {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
+  padding: 100px 0;
 }
 
 h1 {
-  font-size: 50px;
-  line-height: 56px;
+  font-size: 40px;
+  line-height: 46px;
+
+  @media (max-width: 760px) {
+    font-size: 30px;
+    line-height: 34px;
+  }
 }
 
 p {
   font-size: 18px;
   line-height: 28px;
+
+  @media (max-width: 760px) {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
 
 /* ----navbar----- */
@@ -80,7 +90,7 @@ p {
 .menu-icon {
   display: none;
   cursor: pointer;
-  z-index: 2; /* Ensure the menu icon is above the nav-links */
+  z-index: 3;
 }
 
 .nav-link {
@@ -105,14 +115,14 @@ p {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #f0f0f0; /* Set background color for mobile dropdown */
+    background-color: var(--dark-green);
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 30px;
     transform: translateY(-100%);
     transition: transform 0.3s ease-in-out;
-    z-index: 1; /* Ensure nav-links are below the menu icon */
+    z-index: 2;
   }
 
   .nav-links.open {
@@ -138,6 +148,11 @@ p {
     max-width: 900px;
     font-size: 28px;
     line-height: 40px;
+
+    @media (max-width: 760px) {
+      font-size: 26px;
+      line-height: 36px;
+    }
   }
 }
 
@@ -221,8 +236,15 @@ p {
   align-items: center;
   justify-content: center;
 
-  h1 {
+  h2 {
+    font-size: 30px;
+    line-height: 36px;
     font-style: italic;
+
+    @media (max-width: 760px) {
+      font-size: 22px;
+      line-height: 32px;
+    }
   }
 }
 
@@ -235,43 +257,86 @@ p {
   margin: 0 auto;
 
   div {
-    background-color: red;
+    /* background-color: red; */
   }
 }
 
 .tinderCards {
   position: relative;
-  width: 100%;
+  width: 25rem;
   height: 100%;
 }
 
 .cardContainer {
   position: absolute;
   width: 100%;
-  height: 80%; /* Adjust height to leave space for buttons */
 }
 
-.swipe {
-  position: absolute;
-  background-color: white; /* Ensure the card has a background color */
-  width: 100%;
-  height: 100%;
-}
-
-.buttons {
-  position: absolute;
-  bottom: 10px; /* Position buttons at the bottom */
-  width: 100%;
+.slick-arrow {
   display: flex;
+  align-items: center;
   justify-content: center;
-  gap: 10px;
+  background: rgba(255, 252, 252, 0.5);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.slick-prev {
+  left: 10px;
+}
+
+.slick-next {
+  right: 10px;
+}
+
+.mobile-project-page {
+  @media (max-width: 760px) {
+    margin-top: -50vh;
+  }
+}
+
+.project-card {
+  height: 500px;
+  width: 500px;
+}
+
+.card a svg {
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+}
+
+.card a svg:hover {
+  scale: 1.124;
+  color: var(--pry-blue);
+  transform: translateY(-5px);
+  -webkit-transform: translateY(-5px);
+  -moz-transform: translateY(-5px);
+  -ms-transform: translateY(-5px);
+  -o-transform: translateY(-5px);
+}
+.card a:last-child {
+  margin-left: 5px;
 }
 
 /* contact */
 /* -------- Contact section------------------- */
 #contact {
   padding: 10%;
-  text-align: center;
+
+  display: flex;
+  padding-top: 6rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.form {
+  width: 60rem;
 }
 
 .contact-info {
@@ -303,7 +368,7 @@ p {
 }
 
 #message {
-  min-height: 40vh;
+  min-height: 30vh;
   font-size: 16px;
 }
 
