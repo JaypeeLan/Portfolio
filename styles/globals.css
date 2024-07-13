@@ -34,6 +34,7 @@ a:hover {
 .main {
   background: var(--dark-green);
   padding: 10px 5%;
+  overflow-x: hidden;
 }
 
 #home,
@@ -268,7 +269,7 @@ p {
 
 .tinderCards {
   position: relative;
-  width: 25rem;
+  /* width: 25rem; */
   height: 100%;
 }
 
