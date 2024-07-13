@@ -255,9 +255,14 @@ p {
   grid-template-columns: repeat(3, auto);
   gap: 2rem;
   margin: 0 auto;
+}
 
-  div {
-    /* background-color: red; */
+.project-text {
+  /* color: var(--pry-blue); */
+
+  @media (max-width: 760px) {
+    position: relative;
+    top: 25rem;
   }
 }
 

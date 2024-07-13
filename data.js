@@ -2,46 +2,48 @@ export const PROJECTS = [
   {
     src: "/imgs/clemente.png",
     alt: "clemente",
-    projectText: "Countdown Timer for events built with HTML and TypeScript",
-    github: "https://github.com/JaypeeLan/Countdown-Timer",
+    projectText: "A site for a charity organization to display their works",
+    github: "https://github.com/JaypeeLan/clemente-charity",
     live: "https://www.clementecharityfoundation.com.ng",
   },
   {
     src: "/imgs/bottleking.png",
     alt: "bottleking",
-    projectText: "A simple game built with Open Trivia API and TypeScript",
-    github: "https://github.com/JaypeeLan/QUIZ-GAME",
+    projectText: "An ecommerce website for a drinks and liquor store",
+    github: "https://github.com/JaypeeLan/bottleking-app",
     live: "https://bottleking.ng",
   },
   {
     src: "/imgs/sellmedia.png",
     alt: "sellmedia",
+
     projectText:
-      "A landing page for tourist, looking for places in a new region",
-    github: "https://github.com/JaypeeLan/Nexter",
+      "A website for a consultation firm, that provide tech and marketing services",
+    github: "https://github.com/sellmedia-admin/SMG-Official",
     live: "https://sellmedia.africa",
   },
   {
     src: "/imgs/sportsdey.png",
     alt: "sportsdey",
     projectText:
-      "Paint clone whith JavaScript native canvas API and TypeScript",
-    github: "https://github.com/JaypeeLan/Paint-clone",
-    live: "https://jaypeelan.github.io/Paint-clone/",
+      "A sports website for sports enthusiasts that provides news, stats & scores, betting tips etc.",
+    github: "https://github.com/Hallabet/BestOddsNaija",
+    live: "https://www.sportsdey.com",
   },
   {
     src: "/imgs/trendteon.png",
     alt: "trendteon",
-    projectText: "HD Pictures from NASA API and their details and author",
-    github: "https://github.com/JaypeeLan/NASA-APOD",
+    projectText:
+      "A market place for brands to ensure safe transactions when employing an influencer",
+    github: "https://github.com/JaypeeLan/trendteon-frontend/",
     live: "https://trendteon.com",
   },
   {
     src: "/imgs/minds-and-event.png",
     alt: "minds and event",
     projectText:
-      "Minimize any video at the corner of your screen with picture-in-pictture",
-    github: "https://github.com/JaypeeLan/Picture-in-Picture",
+      "A website for an event planning organization, that show case their works, and testimonials",
+    github: "https://github.com/JaypeeLan/Event-Planner",
     live: "https:///mindandevents.netlify.app",
   },
 ];

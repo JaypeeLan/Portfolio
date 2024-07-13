@@ -60,6 +60,9 @@ export default function Projects() {
               ))}
             </div>
           )}
+          <p className="project-text">
+            Projects were built with NextJs, React and Typescript{" "}
+          </p>
         </motion.div>
       </div>
     </div>
