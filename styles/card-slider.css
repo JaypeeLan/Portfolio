@@ -1,0 +1,18 @@
+.slick-prev::before,
+.slick-next::before {
+  color: #0e8f1a;
+  font-size: 30px;
+}
+
+.slick-prev,
+.slick-next {
+  z-index: 1;
+}
+
+.slick-next {
+  right: -13px;
+}
+
+.slick-prev {
+  left: -13px;
+}

@@ -44,9 +44,9 @@ export default function Projects() {
         >
           <h1>Projects</h1>
           {isMobile ? (
-            <div>
+            <>
               <ProjectsMobile />
-            </div>
+            </>
           ) : (
             <div className="project">
               {PROJECTS.map((project) => (

@@ -34,6 +34,7 @@ a:hover {
 .main {
   background: var(--dark-green);
   padding: 10px 5%;
+  overflow-x: hidden;
 }
 
 #home,
@@ -268,33 +269,13 @@ p {
 
 .tinderCards {
   position: relative;
-  width: 25rem;
+  /* width: 25rem; */
   height: 100%;
 }
 
 .cardContainer {
   position: absolute;
   width: 100%;
-}
-
-.slick-arrow {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(255, 252, 252, 0.5);
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  z-index: 1;
-  cursor: pointer;
-}
-
-.slick-prev {
-  left: 10px;
-}
-
-.slick-next {
-  right: 10px;
 }
 
 .mobile-project-page {
@@ -469,4 +450,24 @@ p {
   100% {
     transform: rotate(360deg);
   }
+}
+
+/* ---=---- */
+.slick-prev::before,
+.slick-next::before {
+  color: var(--base-green) !important;
+  font-size: 50px !important;
+}
+
+.slick-prev,
+.slick-next {
+  z-index: 1 !important;
+}
+
+.slick-next {
+  right: 13px !important;
+}
+
+.slick-prev {
+  left: -13px !important;
 }
