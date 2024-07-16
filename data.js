@@ -19,7 +19,7 @@ export const PROJECTS = [
 
     projectText:
       "A website for a consultation firm, that provide tech and marketing services",
-    github: "https://github.com/sellmedia-admin/SMG-Official",
+    github: "https://github.com/JaypeeLan/SMG-Official",
     live: "https://sellmedia.africa",
   },
   {
@@ -27,7 +27,7 @@ export const PROJECTS = [
     alt: "sportsdey",
     projectText:
       "A sports website for sports enthusiasts that provides news, stats & scores, betting tips etc.",
-    github: "https://github.com/Hallabet/BestOddsNaija",
+    github: "https://github.com/JaypeeLan/sportsdey",
     live: "https://www.sportsdey.com",
   },
   {
