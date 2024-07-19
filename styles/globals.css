@@ -97,7 +97,8 @@ p {
 .nav-link {
   margin-right: 40px;
   font-size: 20px;
-  cursor: url("../public/custom-cursor.png"), auto !important;
+
+  cursor: pointer;
 }
 
 .nav-link:hover {
@@ -241,6 +242,7 @@ p {
     font-size: 30px;
     line-height: 36px;
     font-style: italic;
+    font-family: auto !important;
 
     @media (max-width: 760px) {
       font-size: 22px;
